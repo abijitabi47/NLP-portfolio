@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-navy: #070B19;
+  --bg-royal: #1F133D;
+  --text-ivory: #FDFBF7;
+  --accent-gold: #D4AF37;
+  --accent-lavender: #C9BBE9;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #070B19;
+  color: #FDFBF7;
+}
+
+body {
+  background: radial-gradient(circle at 20% 15%, rgba(45, 27, 90, 0.45) 0%, rgba(11, 17, 36, 0.92) 55%, #070B19 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* Custom Paper & Book Spine Texture Effects */
+.journal-page {
+  background: linear-gradient(135deg, rgba(18, 27, 56, 0.92) 0%, rgba(11, 17, 36, 0.96) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow:
+    0 25px 60px -15px rgba(0, 0, 0, 0.75),
+    inset 0 1px 0 0 rgba(253, 251, 247, 0.12),
+    inset 18px 0 32px -12px rgba(7, 11, 25, 0.7);
+}
+
+.ivory-editorial-sheet {
+  background: linear-gradient(145deg, #FDFBF7 0%, #F7F3E8 100%);
+  color: #0B1124;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 14px 0 24px -10px rgba(148, 115, 24, 0.18);
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
